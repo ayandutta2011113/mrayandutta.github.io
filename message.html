@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Message</title>
+     <style>
+    #loading {
+      display: none;
+    }
+  </style>
+  <script>
+    function startLoading() {
+      document.getElementById("send").style.display = "none";
+      document.getElementById("loading").style.display =" Block";
+
+      // Simulate loading for 1 minute
+      setTimeout(function() {
+        // Redirect to "add.html"
+        window.location.href = "add.html";
+
+      }, ); // 60,000 milliseconds = 1 minute
+    }
+  </script>
+  
+</head>
+<body>
+  <textarea name="message" id="message" cols="40" rows="10">I have accepted your proposal. I want to tell you about it that I love you too 😘😘 To propose you I had sent you a lover emoji but you took it as a mistake...... </textarea>
+   <form onsubmit="startLoading(); return false;">
+    <br><button  class="a" id="send" type="send">send</button>
+
+    <div id="loading"></div>
+  </form>
+<style>
+
+  
+  body {
+  background-color: #ffe5e5;
+}
+  button.a {
+    background-color: #00FF30;
+    padding: 8px 15px;
+    color: whitesmoke;
+    border: #3600FF;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    margin: 0 auto;
+    
+    display: block;
+  }
+
+
+  #loading {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #00FF30;
+    border-top-color: transparent;
+    animation: circle 1s linear 100;
+    
+  }
+  
+  @keyframes circle {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+    margin: 0 auto;
+    display:block;
+    
+    
+  }
+</style>
+</body>
+</html>
